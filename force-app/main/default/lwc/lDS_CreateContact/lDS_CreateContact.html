@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Create Contact">
+        
+            <lightning-layout>
+                <lightning-layout-item>
+                    <lightning-input name="Name" label="Name" onchange={handleValueChange}> </lightning-input>
+                    <lightning-input type="email" name="Email" label="Email" onchange={handleValueChange}> </lightning-input>
+                    <lightning-input type="Phone" name="Phone" label="Phone" onchange={handleValueChange}> </lightning-input>
+                    <lightning-button label="Create Contact" variant="brand" onclick={saveContact} class="slds-m-around_small"></lightning-button>
+                </lightning-layout-item>
+                
+            </lightning-layout>
+        
+    </lightning-card>
+</template>
