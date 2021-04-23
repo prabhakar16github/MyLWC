@@ -1,3 +1,24 @@
-<apex:page >
-    Hello, This is the survey home page.
+<apex:page standardStylesheets="true" showHeader="false">
+    
+    <apex:includeLightning />
+     
+    <div id="LWCID">
+        <!-- Lightning Web Component will be included here. -->
+    </div>
+ 
+     <script>
+         
+         $Lightning.use(
+             "c:SurveyApp", // Name of Aura Dependency app where c is namespace.
+             function() { // Callback function
+                
+                 $Lightning.createComponent(
+                     "c:surveyComponent", // Name of Lightning Component where c is namespace.
+                     {}, // attribute parameters
+                     "LWCID" // Id of the element where Lightning Component will be rendered.
+                 );
+             }
+         );
+     </script>
+        
 </apex:page>
